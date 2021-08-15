@@ -18,6 +18,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/operation"
+        android:layout_width="61dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/button7"
+        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/newNumber"
         android:layout_width="wrap_content"
@@ -28,17 +39,6 @@
         android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/result"
         app:layout_constraintEnd_toStartOf="@+id/result" />
-
-    <TextView
-        android:id="@+id/operation"
-        android:layout_width="64dp"
-        android:layout_height="15dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/button7"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button0"
@@ -155,7 +155,7 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="57dp"
+        android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
