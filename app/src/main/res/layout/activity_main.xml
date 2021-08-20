@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/result"
-        android:layout_width="241dp"
-        android:layout_height="38dp"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -19,25 +19,21 @@
         android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/newNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.322" />
 
     <EditText
         android:id="@+id/newNumber"
-        android:layout_width="260dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_width="261dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.226"
-        app:layout_constraintStart_toEndOf="@+id/operation"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <TextView
@@ -47,8 +43,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text=""
         app:layout_constraintBaseline_toBaselineOf="@id/newNumber"
+        app:layout_constraintEnd_toStartOf="@+id/button7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/newNumber" />
 
@@ -136,7 +133,7 @@
         android:id="@+id/button7"
         android:layout_width="60dp"
         android:layout_height="39dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:minWidth="46dp"
         android:text="7"
         app:layout_constraintStart_toStartOf="@+id/newNumber"
@@ -167,8 +164,8 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="57dp"
-        android:layout_height="40dp"
+        android:layout_width="59dp"
+        android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:minWidth="46dp"

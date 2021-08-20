@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        //For lots of buttons, a loop could be used here
         button0.setOnClickListener(listener);
         button1.setOnClickListener(listener);
         button2.setOnClickListener(listener);
@@ -65,6 +66,33 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(listener);
         button8.setOnClickListener(listener);
         button9.setOnClickListener(listener);
-        
+        buttonDot.setOnClickListener(listener);
+
+        View.OnClickListener opListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button b = (Button) v;
+                String op = b.getText().toString();
+                String value = newNumber.getText().toString();
+
+                if(value.length() != 0){
+                    performOperation(value, op);
+                }
+
+                pendingOperation = op;
+                displayOperation.setText(pendingOperation);
+            }
+        };
+
+        buttonEquals.setOnClickListener(opListener);
+        buttonDivide.setOnClickListener(opListener);
+        buttonMultiply.setOnClickListener(opListener);
+        buttonMinus.setOnClickListener(opListener);
+        buttonPlus.setOnClickListener(opListener);
+    }
+
+    private void performOperation(String value, String operation){
+        displayOperation.setText(operation);
+
     }
 }
