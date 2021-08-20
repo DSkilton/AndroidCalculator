@@ -91,8 +91,40 @@ public class MainActivity extends AppCompatActivity {
         buttonPlus.setOnClickListener(opListener);
     }
 
-    //dummy operation. Will need updating 
+    //dummy operation. Will need updating
     private void performOperation(String value, String operation){
-        displayOperation.setText(operation);
-    }
-}
+        if(null == operand1){
+            operand1 = Double.valueOf(value);
+        } else {
+            operand2 = Double.valueOf(value);
+
+            if(pendingOperation.equals("=")){
+                pendingOperation = operation;
+            }
+            switch (pendingOperation){
+                case"=":
+                    operand1 = operand2;
+                    break;
+                case "/":
+                    if(operand2 == 0){ //check for divide by zero
+                        operand1 = 0.0;
+                    } else {
+                        operand1 /= operand2;
+                    }
+                    break;
+                case "*":
+                    operand1 *= operand2;
+                    break;
+                case "-":
+                    operand1 -= operand2;
+                    break;
+                case "+":
+                    operand1 += operand2;
+                    break;
+            } //end of switch
+        } //end of else
+
+        result.setText(operand1.toString());
+        newNumber.setText("");
+    } //end of performOperation
+} //end of class
