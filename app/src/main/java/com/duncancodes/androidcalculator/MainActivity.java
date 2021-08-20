@@ -91,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
         buttonPlus.setOnClickListener(opListener);
     }
 
+    //dummy operation. Will need updating 
     private void performOperation(String value, String operation){
         displayOperation.setText(operation);
-
     }
 }
