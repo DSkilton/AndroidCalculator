@@ -2,6 +2,7 @@ package com.duncancodes.androidcalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText newNumber;
     private TextView displayOperation;
 
-    //variables to hold operands and type of caluclations
+    //variables to hold operands and type of calculations
     private Double operand1 = null;
     private Double operand2 = null;
     private String pendingOperation = "=";
@@ -45,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
         Button buttonMultiply = (Button) findViewById(R.id.buttonMultiply);
         Button buttonMinus = (Button) findViewById(R.id.buttonMinus);
         Button buttonPlus = (Button) findViewById(R.id.buttonPlus);
+
+        View.OnClickListener listener = new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Button b = (Button) view;
+                newNumber.append(b.getText().toString());
+            }
+        };
 
     }
 }
