@@ -128,8 +128,8 @@
         android:id="@+id/button8"
         android:layout_width="60dp"
         android:layout_height="39dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:minWidth="46dp"
         android:text="8"
         app:layout_constraintBottom_toBottomOf="@+id/button9"
@@ -139,13 +139,34 @@
         android:id="@+id/button9"
         android:layout_width="60dp"
         android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:minWidth="46dp"
         android:text="9"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:minWidth="46dp"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/buttonNeg"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:minWidth="46dp"
+        android:text="Neg"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonDivide"
+        app:layout_constraintStart_toEndOf="@+id/buttonDivide" />
 
     <Button
         android:id="@+id/buttonEquals"
@@ -167,17 +188,6 @@
         android:text="*"
         app:layout_constraintBottom_toBottomOf="@+id/button6"
         app:layout_constraintStart_toEndOf="@+id/button6" />
-
-    <Button
-        android:id="@+id/buttonDivide"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:minWidth="46dp"
-        android:text="/"
-        app:layout_constraintBottom_toBottomOf="@+id/button9"
-        app:layout_constraintStart_toEndOf="@+id/button9" />
 
     <Button
         android:id="@+id/buttonPlus"
